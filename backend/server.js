@@ -59,7 +59,8 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 // Serve static files from React build (PRODUCTION ONLY - VERCEL SPECIFIC)
 if (process.env.NODE_ENV === 'production') {
   // In Vercel, the frontend build will be in a different location
-  app.use(express.static(path.join(__dirname, '../frontend/dist')));
+  // app.use(express.static(path.join(__dirname, '../frontend/dist')));
+  // not required if backend and frontend are deployed saperately.
 }
 
 // MongoDB connection - SAME FOR LOCAL AND VERCEL
