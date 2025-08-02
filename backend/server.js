@@ -268,12 +268,12 @@ app.get('/api/health', (req, res) => {
   });
 });
 
-// Handle React routing - PRODUCTION ONLY (VERCEL SPECIFIC)
-if (process.env.NODE_ENV === 'production') {
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../frontend/dist', 'index.html'));
-  });
-}
+// Handle React routing - PRODUCTION ONLY (VERCEL SPECIFIC) - backend and frontend are deployed separately
+// if (process.env.NODE_ENV === 'production') {
+//   app.get('*', (req, res) => {
+//     res.sendFile(path.join(__dirname, '../frontend/dist', 'index.html'));
+//   });
+// }
 
 // Error handling middleware
 app.use((err, req, res, next) => {
