@@ -46,7 +46,7 @@ app.use(compression());
 // CORS configuration - DIFFERENT FOR LOCAL VS VERCEL
 const corsOptions = {
   origin: process.env.NODE_ENV === 'production' 
-    ? ['https://task-manager-frontend-ashays-projects-dc8069e0.vercel.app'] // Replace with your actual Vercel domain
+    ? ['https://task-manager-frontend-weld-six.vercel.app'] // Replace with your actual Vercel domain
     : ['http://localhost:3000', 'http://localhost:5173'], // Vite dev server ports
   credentials: true,
   optionsSuccessStatus: 200
