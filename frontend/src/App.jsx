@@ -3,7 +3,7 @@ import { Plus, Trash2, Check, Star, Filter, Search, RefreshCw } from 'lucide-rea
 
 // API configuration - DIFFERENT FOR LOCAL VS VERCEL
 const API_BASE_URL = import.meta.env.PROD 
-  ? '/api' // Production: relative path (same domain on Vercel)
+  ? 'https://task-manager-backend-ashays-projects-dc8069e0.vercel.app/api' // Production: relative path (same domain on Vercel)
   : 'http://localhost:5000/api'; // Development: full URL to backend server
 
 function App() {
